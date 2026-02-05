@@ -1,7 +1,7 @@
-export default function DashboardPage() {
-  return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
-    </div>
-  );
-}
+import React from 'react';
+
+const DashboardPage: React.FC = () => {
+  return <div>Welcome to the Dashboard!</div>;
+};
+
+export default DashboardPage; 
