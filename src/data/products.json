@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "slug": "t-shirts",
+    "title": "Premium Cotton T-Shirts",
+    "description": "100% premium cotton, custom prints, sizes S–XXL. Perfect for casual wear and corporate uniforms with superior comfort and durability.",
+    "category": "Casual Wear",
+    "features": [
+      "Breathable organic cotton fabric",
+      "Customizable designs and prints",
+      "Multiple color options available",
+      "Available in sizes S-XXL",
+      "OEKO-TEX certified materials"
+    ],
+    "image": "/images/tshirts-placeholder.jpg"
+  },
+  {
+    "id": 2,
+    "slug": "polo-shirts", 
+    "title": "Classic Piqué Polo Shirts",
+    "description": "Premium piqué fabric, embroidered logos, professional finish. Ideal for corporate events, sports teams, and retail collections.",
+    "category": "Corporate Wear",
+    "features": [
+      "Durable piqué weave construction",
+      "Professional embroidery ready",
+      "Moisture-wicking properties",
+      "Ribbed collar and cuffs",
+      "Reinforced seams for longevity"
+    ],
+    "image": "/images/polo-placeholder.jpg"
+  },
+  {
+    "id": 3,
+    "slug": "denim",
+    "title": "Premium Denim Collection",
+    "description": "High-quality denim fabrics, custom cuts, sustainable production methods. Available in various washes and fits.",
+    "category": "Fashion Wear",
+    "features": [
+      "Sustainable and eco-friendly materials",
+      "Custom fits and cuts available",
+      "Multiple wash options",
+      "Stretch and rigid denim options",
+      "Modern trendy designs"
+    ],
+    "image": "/images/denim-placeholder.jpg"
+  },
+  {
+    "id": 4,
+    "slug": "jackets",
+    "title": "Outerwear Jackets",
+    "description": "Water-resistant, stylish designs, perfect for seasonal collections. Available in various materials and styles.",
+    "category": "Outerwear",
+    "features": [
+      "Advanced weather protection",
+      "Trendy contemporary designs",
+      "Multiple style options",
+      "Insulated and lightweight options",
+      "Customizable branding areas"
+    ],
+    "image": "/images/jackets-placeholder.jpg"
+  },
+  {
+    "id": 5,
+    "slug": "sweaters",
+    "title": "Luxury Knit Sweaters",
+    "description": "Premium knitted sweaters in various yarns and weights. Perfect for cold weather and fashion-forward collections.",
+    "category": "Winter Wear",
+    "features": [
+      "Premium yarn selections",
+      "Various knitting patterns available",
+      "Warm and comfortable fit",
+      "Professional finishing touches",
+      "Seasonal trend incorporation"
+    ],
+    "image": "/images/sweaters-placeholder.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "shirts",
+    "title": "Dress Shirts & Blouses",
+    "description": "Professional dress shirts and blouses for formal wear. Available in various fabrics and styles.",
+    "category": "Formal Wear",
+    "features": [
+      "Premium fabric selections",
+      "Professional tailoring",
+      "Multiple style options",
+      "Custom collar and cuff designs",
+      "Professional business attire"
+    ],
+    "image": "/images/shirts-placeholder.jpg"
+  }
+]

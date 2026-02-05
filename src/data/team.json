@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Mr. Chairman Name",
+    "role": "Chairman",
+    "email": "chairman@stitch-tex.com",
+    "phone": "+880 1XXX-XXXXXX",
+    "department": "Executive"
+  },
+  {
+    "name": "Mr. Managing Director Name",
+    "role": "Managing Director", 
+    "email": "md@stitch-tex.com",
+    "phone": "+880 1XXX-XXXXXX",
+    "department": "Operations"
+  },
+  {
+    "name": "Mr. Director Name",
+    "role": "Director",
+    "email": "director@stitch-tex.com", 
+    "phone": "+880 1XXX-XXXXXX",
+    "department": "Business Development"
+  },
+  {
+    "name": "Ms. Sales Manager Name",
+    "role": "Sales Manager",
+    "email": "sales@stitch-tex.com",
+    "phone": "+880 1XXX-XXXXXX", 
+    "department": "Sales"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "mission": "To provide a reliable bridge between global buyers and manufacturers, ensuring timely and quality delivery.",
+  "vision": "To be a trusted partner in ethical, innovative, and timely garment sourcing.",
+  "values": [
+    "Quality",
+    "Transparency", 
+    "Innovation",
+    "Reliability"
+  ],
+  "leadership": [
+    {
+      "name": "Mr. Chairman Name",
+      "role": "Chairman",
+      "quote": "Our journey began with a vision to connect global buyers with the finest manufacturers in Bangladesh, creating lasting partnerships built on trust and excellence."
+    },
+    {
+      "name": "Mr. MD Name", 
+      "role": "Managing Director",
+      "quote": "Quality and transparency are non-negotiable. We ensure every product meets the highest standards while maintaining ethical practices throughout our supply chain."
+    },
+    {
+      "name": "Mr. Director Name",
+      "role": "Director", 
+      "quote": "Innovation drives us forward. We continuously evolve our processes to deliver exceptional value to our global partners."
+    }
+  ]
+}
