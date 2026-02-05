@@ -5,10 +5,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
+    "noEmit": false,  // Temporarily set to false to see any errors
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",  // Change to "node" instead of "bundler"
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
