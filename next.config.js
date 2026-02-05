@@ -1,6 +1,7 @@
-import type { NextConfig } from 'next'
+// next.config.js
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   // To silence the Turbopack warning, explicitly acknowledge Turbopack
   // This empty object tells Next.js you are aware of Turbopack and have no specific Turbopack config yet
   turbopack: {}, 
@@ -23,15 +24,7 @@ const nextConfig: NextConfig = {
       // Add other allowed hosts as needed
       // Example for unsplash: { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
-    // If you need to keep localhost for dev, you can add it here too
-    // but remotePatterns is the preferred way
-    // domains: ['localhost', '127.0.0.1', '0.0.0.0'] // Remove this line
   },
-
-  // Remove the invalid experimental key
-  // experimental: {
-  //   serverComponentsExternalPackages: [], // Remove this
-  // },
 
   // Headers for external access (optional, can help with CORS during dev if needed)
   async headers() {
@@ -61,4 +54,4 @@ const nextConfig: NextConfig = {
   // webpack5: false, // Keep commented out unless troubleshooting
 };
 
-export default nextConfig
+module.exports = nextConfig;
