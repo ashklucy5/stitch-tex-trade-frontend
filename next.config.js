@@ -1,57 +1,62 @@
-// next.config.js
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // To silence the Turbopack warning, explicitly acknowledge Turbopack
-  // This empty object tells Next.js you are aware of Turbopack and have no specific Turbopack config yet
-  turbopack: {}, 
-
-  // Corrected images configuration
+  // ✅ VALID CONFIG ONLY - turbopack key REMOVED (invalid in config)
+  
+  // Image optimization configuration
   images: {
-    // Use remotePatterns instead of domains
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '3000', // Adjust if needed
-        pathname: '/**', // Allow all paths
-      },
-      {
-        protocol: 'https',
-        hostname: 'your-production-image-host.com', // Add your prod image host if needed
+        port: '3000',
         pathname: '/**',
       },
-      // Add other allowed hosts as needed
-      // Example for unsplash: { protocol: 'https', hostname: 'images.unsplash.com' },
+      // 🔒 PRODUCTION: Replace with your actual image hosts
+      // {
+      //   protocol: 'https',
+      //   hostname: 'your-production-cdn.com',
+      //   pathname: '/uploads/**',
+      // },
+      // Example for common services:
+      // { protocol: 'https', hostname: 'images.unsplash.com' },
+      // { protocol: 'https', hostname: 'res.cloudinary.com' },
     ],
   },
 
-  // Headers for external access (optional, can help with CORS during dev if needed)
+  // ⚠️ SECURITY NOTE: 
+  // CORS headers should be handled in API routes (app/api/**), NOT here.
+  // This headers config applies to PAGE responses only (not API routes).
+  // For API CORS: Implement in individual route handlers using:
+  //   headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN)
+  // 
+  // Keeping minimal headers config for page responses only:
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
-            key: 'Access-Control-Allow-Origin',
-            value: '*', // Be careful with wildcard in production
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
           {
-            key: 'Access-Control-Allow-Methods',
-            value: 'GET, POST, PUT, DELETE, OPTIONS',
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
           {
-            key: 'Access-Control-Allow-Headers',
-            value: 'X-Requested-With, Content-Type, Accept, Authorization',
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
         ],
       },
-    ]
+    ];
   },
 
-  // Optional: Explicitly disable webpack mode if you want to ensure Turbopack
-  // This is usually not necessary if turbopack: {} is present
-  // webpack5: false, // Keep commented out unless troubleshooting
+  // Optional: Enable strict mode for development
+  reactStrictMode: true,
+
+  // Optional: Output directory configuration
+  // output: 'export', // Uncomment for static export builds
 };
 
 module.exports = nextConfig;
