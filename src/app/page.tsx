@@ -26,7 +26,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Discover Timeless Elegance
+            Discovery Timeless Elegance
           </motion.h1>
           
           <motion.p 
