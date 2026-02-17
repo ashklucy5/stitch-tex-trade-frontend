@@ -1,3 +1,4 @@
+//C:\Users\Administrator\Desktop\app  dev\stitch tex trade\stitch-tex-trade-frontend\src\app\products\slug\page.tsx
 'use client'
 
 import { useParams } from 'next/navigation'
