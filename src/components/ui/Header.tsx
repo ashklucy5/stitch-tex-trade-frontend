@@ -21,6 +21,7 @@ export function Header() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
+        // ⚠️ CRITICAL FIX: Removed trailing spaces from URL
         const response = await fetch('https://stitchtextrading.com/api/categories')
         if (!response.ok) throw new Error('Failed to fetch categories')
         const data = await response.json()
@@ -91,10 +92,26 @@ export function Header() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            {/* Logo */}
-            <Link href="/" className="text-2xl font-bold text-primary-900 flex items-center">
-              <span>StitchText</span>
-              <span className="ml-1 text-accent-blue">Trading</span>
+            {/* Logo - Elegant cursive gradient */}
+            <Link href="/" className="flex items-center">
+              <span 
+                className="text-3xl md:text-5xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600 tracking-tight"
+                style={{ 
+                  fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
+                  WebkitFontSmoothing: 'antialiased'
+                }}
+              >
+                StitchTex
+              </span>
+              <span 
+                className="ml-1.5 text-2xl md:text-3xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 tracking-tight"
+                style={{ 
+                  fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
+                  WebkitFontSmoothing: 'antialiased'
+                }}
+              >
+                Trading
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -104,10 +121,10 @@ export function Header() {
                 <li>
                   <Link 
                     href="/" 
-                    className="font-medium text-primary-900 hover:text-accent-blue transition-colors relative group"
+                    className="font-medium text-gray-900 hover:text-blue-600 transition-colors relative group"
                   >
                     Home
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </Link>
                 </li>
                 
@@ -118,7 +135,7 @@ export function Header() {
                 >
                   <Link 
                     href="/categories" 
-                    className="font-medium text-neutral-700 hover:text-accent-blue transition-colors"
+                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     Categories
                   </Link>
@@ -131,11 +148,11 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute left-0 mt-2 w-[320px] bg-white rounded-lg shadow-xl overflow-hidden border border-neutral-200"
+                      className="absolute left-0 mt-2 w-[320px] bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200"
                     >
                       {/* Dropdown Header */}
-                      <div className="p-4 border-b border-neutral-100">
-                        <h3 className="text-lg font-semibold text-primary-900">Explore Categories</h3>
+                      <div className="p-4 border-b border-gray-100">
+                        <h3 className="text-lg font-semibold text-gray-900">Explore Categories</h3>
                       </div>
                       
                       {/* Dropdown Content - Grid Layout */}
@@ -149,7 +166,7 @@ export function Header() {
                             Failed to load categories
                           </div>
                         ) : categories.length === 0 ? (
-                          <div className="col-span-2 py-4 text-center text-neutral-500 text-sm">
+                          <div className="col-span-2 py-4 text-center text-gray-500 text-sm">
                             No categories available
                           </div>
                         ) : (
@@ -157,7 +174,7 @@ export function Header() {
                             <Link
                               key={category.id}
                               href={`/category/${category.id}`}
-                              className="block px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 hover:text-accent-blue rounded transition-colors"
+                              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded transition-colors"
                             >
                               {category.name}
                             </Link>
@@ -166,10 +183,10 @@ export function Header() {
                       </div>
                       
                       {/* View All Button */}
-                      <div className="px-4 py-3 border-t border-neutral-100">
+                      <div className="px-4 py-3 border-t border-gray-100">
                         <Link
                           href="/categories"
-                          className="block text-sm font-medium text-accent-blue hover:text-accent-cyan transition-colors"
+                          className="block text-sm font-medium text-blue-600 hover:text-cyan-500 transition-colors"
                         >
                           View all categories →
                         </Link>
@@ -182,20 +199,20 @@ export function Header() {
                 <li>
                   <Link 
                     href="/about" 
-                    className="font-medium text-neutral-700 hover:text-accent-blue transition-colors relative group"
+                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group"
                   >
                     About
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </Link>
                 </li>
                 
                 <li>
                   <Link 
                     href="/contact" 
-                    className="font-medium text-neutral-700 hover:text-accent-blue transition-colors relative group"
+                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group"
                   >
                     Contact
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </Link>
                 </li>
               </ul>
@@ -204,12 +221,12 @@ export function Header() {
             {/* Mobile menu button */}
             <button 
               onClick={toggleSidebar}
-              className="md:hidden text-primary-900 focus:outline-none menu-button"
+              className="md:hidden text-gray-900 focus:outline-none menu-button"
               aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
             >
               <div className="space-y-1.5">
                 <motion.span
-                  className="block w-6 h-0.5 bg-primary-900 rounded"
+                  className="block w-6 h-0.5 bg-gray-900 rounded"
                   animate={{ 
                     rotate: isSidebarOpen ? -45 : 0,
                     y: isSidebarOpen ? 2 : 0
@@ -217,7 +234,7 @@ export function Header() {
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="block w-6 h-0.5 bg-primary-900 rounded"
+                  className="block w-6 h-0.5 bg-gray-900 rounded"
                   animate={{ 
                     opacity: isSidebarOpen ? 0 : 1,
                     x: isSidebarOpen ? -10 : 0
@@ -225,7 +242,7 @@ export function Header() {
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="block w-6 h-0.5 bg-primary-900 rounded"
+                  className="block w-6 h-0.5 bg-gray-900 rounded"
                   animate={{ 
                     rotate: isSidebarOpen ? 45 : 0,
                     y: isSidebarOpen ? -2 : 0
@@ -260,19 +277,35 @@ export function Header() {
               className="md:hidden fixed top-0 left-0 h-full w-64 bg-white shadow-2xl z-50 sidebar-menu"
             >
               {/* Sidebar Header */}
-              <div className="p-6 border-b border-neutral-100">
+              <div className="p-6 border-b border-gray-100">
                 <div className="flex justify-between items-center">
                   <Link 
                     href="/" 
                     onClick={closeSidebar}
-                    className="text-xl font-bold text-primary-900 flex items-center"
+                    className="flex items-center"
                   >
-                    <span>StitchText</span>
-                    <span className="ml-1 text-accent-blue">Trading</span>
+                    <span 
+                      className="text-2xl md:text-3xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600 tracking-tight"
+                      style={{ 
+                        fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
+                        WebkitFontSmoothing: 'antialiased'
+                      }}
+                    >
+                      StitchTex
+                    </span>
+                    <span 
+                      className="ml-1 text-xl md:text-2xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 tracking-tight"
+                      style={{ 
+                        fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
+                        WebkitFontSmoothing: 'antialiased'
+                      }}
+                    >
+                      Trading
+                    </span>
                   </Link>
                   <button
                     onClick={closeSidebar}
-                    className="text-primary-900 focus:outline-none"
+                    className="text-gray-900 focus:outline-none"
                     aria-label="Close menu"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -290,7 +323,7 @@ export function Header() {
                     <Link 
                       href="/" 
                       onClick={closeSidebar}
-                      className="block w-full text-lg font-medium text-primary-900 py-3 px-4 rounded-lg hover:bg-neutral-50 transition-colors"
+                      className="block w-full text-lg font-medium text-gray-900 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       Home
                     </Link>
@@ -301,7 +334,7 @@ export function Header() {
                     <Link 
                       href="/categories"
                       onClick={closeSidebar}
-                      className="block w-full text-lg font-medium text-neutral-800 py-3 px-4 rounded-lg hover:bg-neutral-50 hover:text-accent-blue transition-colors"
+                      className="block w-full text-lg font-medium text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-50 hover:text-blue-600 transition-colors"
                     >
                       Categories
                     </Link>
@@ -312,7 +345,7 @@ export function Header() {
                     <Link 
                       href="/about"
                       onClick={closeSidebar}
-                      className="block w-full text-lg font-medium text-neutral-800 py-3 px-4 rounded-lg hover:bg-neutral-50 hover:text-accent-blue transition-colors"
+                      className="block w-full text-lg font-medium text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-50 hover:text-blue-600 transition-colors"
                     >
                       About Us
                     </Link>
@@ -322,45 +355,21 @@ export function Header() {
                     <Link 
                       href="/contact"
                       onClick={closeSidebar}
-                      className="block w-full text-lg font-medium text-neutral-800 py-3 px-4 rounded-lg hover:bg-neutral-50 hover:text-accent-blue transition-colors"
+                      className="block w-full text-lg font-medium text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-50 hover:text-blue-600 transition-colors"
                     >
                       Contact Us
                     </Link>
                   </li>
                   
                   {/* Footer Links */}
-                  <li className="mt-4 pt-4 border-t border-neutral-100">
-                    <div className="px-4 py-2 text-sm font-semibold text-neutral-500 uppercase tracking-wider">
-                      Legal
-                    </div>
-                  </li>
                   
-                  <li>
-                    <Link 
-                      href="/privacy-policy"
-                      onClick={closeSidebar}
-                      className="block w-full text-base font-medium text-neutral-800 py-2.5 px-4 rounded-lg hover:bg-neutral-50 hover:text-accent-blue transition-colors"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  
-                  <li>
-                    <Link 
-                      href="/terms-of-service"
-                      onClick={closeSidebar}
-                      className="block w-full text-base font-medium text-neutral-800 py-2.5 px-4 rounded-lg hover:bg-neutral-50 hover:text-accent-blue transition-colors"
-                    >
-                      Terms of Service
-                    </Link>
-                  </li>
                 </ul>
               </nav>
 
               {/* Sidebar Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-neutral-100 bg-neutral-50">
-                <p className="text-sm text-neutral-600 text-center">
-                  © {new Date().getFullYear()} StitchText Trading
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100 bg-gray-50">
+                <p className="text-sm text-gray-600 text-center">
+                  © {new Date().getFullYear()} StitchTex Trading
                 </p>
               </div>
             </motion.div>
