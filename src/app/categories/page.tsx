@@ -94,7 +94,7 @@ export default function CategoriesPage() {
             Our Product Categories
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover our premium collection of textile products, carefully curated for quality and style
+            Discover our premium collection of textile products, carefully curated for quality and style.
           </p>
         </div>
 
