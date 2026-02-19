@@ -30,9 +30,7 @@ export default function CategoriesPage() {
           
           // ✅ CORRECT IMAGE URL FORMAT (verified working):
           // API returns "products/filename.jpg" → full URL: /storage/products/filename.jpg
-          const imageUrl = firstProduct?.image 
-            ? `https://stitchtextrading.com/storage/${firstProduct.image}`
-            : null
+          const imageUrl = firstProduct?.image_url ?? null
 
           return {
             ...category,
