@@ -175,7 +175,7 @@ export default function CategoryDetailPage() {
               <div className="aspect-square bg-gray-100 overflow-hidden relative">
                 {product.image ? (
                   <img
-                    src={src={product.image_url}
+                    src={product.image_url}
                     alt={`${categoryName} product ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
