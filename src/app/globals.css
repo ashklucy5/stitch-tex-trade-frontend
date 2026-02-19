@@ -3,6 +3,8 @@
 @import '@fontsource/montserrat/600.css';
 @import '@fontsource/roboto/400.css';
 @import '@fontsource/roboto/500.css';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Meddon&display=swap");
 
 /* Then Tailwind directives */
 @tailwind base;
@@ -19,12 +21,33 @@
   body {
     color: rgb(var(--foreground-rgb));
     background: rgb(var(--background-rgb));
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif,'Google Sans Code';
     line-height: 1.5;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+  }
+}
+
+.mistral-font {
+  font-family: "Mistral", "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2.2rem; /* text-3xl base */
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 640px) {
+  .mistral-font {
+    font-size: 2.25rem; /* sm:text-4xl */
+  }
+}
+
+@media (min-width: 768px) {
+  .mistral-font {
+    font-size: 3rem; /* md:text-5xl */
   }
 }

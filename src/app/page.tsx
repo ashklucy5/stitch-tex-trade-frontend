@@ -31,7 +31,7 @@ export default function HomePage() {
           </div>
           
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700"
+            className="mistral-font text-6xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-400"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -91,10 +91,10 @@ export default function HomePage() {
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <div className="text-white text-3xl sm:text-4xl font-bold tracking-tight">S</div>
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-1">
-                    COMPANY PROFILE
+                  <h3 className="text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-1">
+                    About Us
                   </h3>
-                  <p className="text-base sm:text-lg font-medium text-gray-700 mt-1">
+                  <p className="mistral-font text-base sm:text-2xl font-medium text-gray-700 mt-1">
                     Every stitch tells a story
                   </p>
                 </div>
@@ -125,33 +125,48 @@ export default function HomePage() {
                   </div>
                   
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-5 sm:mb-6 leading-tight">
-                    Warm Greetings from <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">STITCH TEX TRADING</span>
+                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">STITCH TEX TRADING</span>
                   </h2>
                   
-                  <div className="space-y-4 sm:space-y-5">
-                    <p className="text-gray-800 leading-relaxed">
-                      In a world where everything is constantly evolving, fashion is no exception. At STITCH TEX TRADING, we stay aligned with the ever-changing trends of global fashion to meet our buyers' dynamic needs.
+                  <div className="space-y-4 sm:space-y-5 text-justify">
+                    <p className="text-gray-800 leading-relaxed font">
+                      We would like to introduce ourselves, "STITCH TEX TRADING", as
+Buying House which is 100% export oriented garment trading
+Company Set-up located in Dhaka, Bangladesh. We are special- ized in T-Shirts, Polo-Shirts, Sweatshirts, Pullover, Trousers,
+Shorts, Jackets and Casual Wear & Formal Wear for Men, Women
+& Children and offer these products to our customers in
+GERMAN, SPAIN, ITALY, UK, USA, CANADA & AUSTRALIA with in
+Competitive Price, Right Quality and maintain Lead-time as per
+buyer's requirements.
                     </p>
                     
                     <p className="text-gray-800 leading-relaxed">
-                      We specialize in supplying all types of ready-made garments based on buyer requirements—ensuring top quality at the most competitive prices. Every order we receive is a responsibility we take seriously, from production to on-time delivery.
+                     We are entitled to maintain a consistent high standard of busi- ness conduct, ethics and social responsibilities. We take pride in
+the efficiency of what we do and always try to adopt the most
+effective and latest technology available. We also have numbers
+of good Factories associated with us and we do all sorts of
+Woven and Knit Outer. We have our own QA and Merchandising
+team with a nice set up and our existing Buyers are happy with
+our performance.
                     </p>
                     
                     <p className="text-gray-800 leading-relaxed">
-                      We believe success lies in delivering the right product, at the right time, with the right quality. That is our commitment.
+                      We strive to serve our valued buyers by working with the best
+manufactures of the industry who are able to offer their best
+prices in the market. All we can say is,
                     </p>
                     
                     <p className="text-gray-800 leading-relaxed font-medium">
-                      We warmly welcome you to experience the professionalism and reliability of STITCH TEX TRADING.
+                      “Try us once, even with a small test order, and we will prove our- selves with the quality you desire.”
                     </p>
                   </div>
                   
-                  <div className="mt-6 pt-5 sm:mt-8 sm:pt-6 border-t border-gray-100 text-right">
+                  {/* <div className="mt-6 pt-5 sm:mt-8 sm:pt-6 border-t border-gray-100 text-right">
                     <div className="inline-block">
                       <div className="text-base sm:text-lg font-bold text-gray-900">Md. Rafiul Islam</div>
                       <div className="text-blue-600 font-medium text-sm sm:text-base">Chairman & CEO</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
@@ -161,118 +176,112 @@ export default function HomePage() {
 
       {/* Leadership Messages Section - Fully Responsive */}
       <section className="py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Our Leadership</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
-              Insights from our experienced leadership team who guide our commitment to excellence
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Chairman's Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3">
-                  <span className="text-blue-600 font-bold text-lg sm:text-xl">C</span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">CHAIRMAN'S MESSAGE</h3>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-3 sm:p-4 mb-4">
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                  Warm Greetings from STITCH TEX TRADING
-                </p>
-              </div>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                <p className="text-gray-700 leading-relaxed">
-                  In a world where everything is constantly evolving, fashion is no exception. At STITCH TEX TRADING, we stay aligned with the ever-changing trends of global fashion to meet our buyers' dynamic needs.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  We specialize in supplying all types of ready-made garments based on buyer requirements—ensuring top quality at the most competitive prices. Every order we receive is a responsibility we take seriously, from production to on-time delivery.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  We believe success lies in delivering the right product, at the right time, with the right quality. That is our commitment.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  We warmly welcome you to experience the professionalism and reliability of STITCH TEX TRADING.
-                </p>
-              </div>
-              <div className="mt-5 sm:mt-6 text-right">
-                <span className="font-bold text-gray-900 text-sm sm:text-base">- Md. Rafiul Islam</span>
-              </div>
-            </motion.div>
-            
-            {/* Managing Director's Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3">
-                  <span className="text-blue-600 font-bold text-lg sm:text-xl">MD</span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">MANAGING DIRECTOR'S MESSAGE</h3>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-3 sm:p-4 mb-4">
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                  I have had the privilege of serving as the Managing Director of STITCH TEX TRADING since 2008. Over the years, Bangladesh has emerged as a key player in the global apparel industry, and we are proud to contribute to that growth.
-                </p>
-              </div>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                <p className="text-gray-700 leading-relaxed">
-                  At STITCH TEX TRADING, our priority is to meet and exceed the expectations of our global buyers. Their satisfaction is our greatest reward. We are committed to delivering high-quality garments, on-time production, and professional service—always respecting the trust placed in us.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  It is my firm belief that consistent buyer satisfaction builds lasting partnerships. That is our promise.
-                </p>
-              </div>
-              <div className="mt-5 sm:mt-6 text-right">
-                <span className="font-bold text-gray-900 text-sm sm:text-base">- Md Kabir Hossain</span>
-              </div>
-            </motion.div>
-            
-            {/* Director's Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3">
-                  <span className="text-blue-600 font-bold text-lg sm:text-xl">D</span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">DIRECTOR'S MESSAGE</h3>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-3 sm:p-4 mb-4">
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                  Since 2008, I have proudly led STITCH TEX TRADING with a clear mission: to deliver quality, reliability, and complete satisfaction to our global partners. As Bangladesh continues to rise as a powerhouse in the world clothing industry, we stand committed to excellence in every stitch we produce.
-                </p>
-              </div>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                <p className="text-gray-700 leading-relaxed">
-                  Our buyers are not just clients—they are our partners. Their trust drives our performance, and their satisfaction defines our success. We listen, we adapt, and we always go the extra mile to meet and exceed expectations.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  At STITCH TEX TRADING, we don't just make garments—we build lasting relationships through integrity, quality, and dedication.
-                </p>
-              </div>
-              <div className="mt-5 sm:mt-6 text-right">
-                <span className="font-bold text-gray-900 text-sm sm:text-base">- Muhammad Toufiq Saleheen</span>
-              </div>
-            </motion.div>
-          </div>
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 py-10">
+  {/* Chairman's Message */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+  >
+    <div className="flex items-center mb-5">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+        <span className="text-blue-600 font-bold text-lg sm:text-xl">C</span>
+      </div>
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900">CHAIRMAN'S MESSAGE</h3>
+    </div>
+
+    {/* Single Justified Text Block */}
+    <div className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify flex-grow">
+      <p className="mb-4">
+        Warm Greetings from STITCH TEX TRADING.
+      </p>
+      <p className="mb-4">
+        In a world where everything is constantly evolving, fashion is no exception. At STITCH TEX TRADING, we stay aligned with the ever-changing trends of global fashion to meet our buyers' dynamic needs.
+      </p>
+      <p className="mb-4">
+        We specialize in supplying all types of ready-made garments based on buyer requirements—ensuring top quality at the most competitive prices. Every order we receive is a responsibility we take seriously, from production to on-time delivery.
+      </p>
+      <p className="mb-4">
+        We believe success lies in delivering the right product, at the right time, with the right quality. That is our commitment.
+      </p>
+      <p>
+        We warmly welcome you to experience the professionalism and reliability of STITCH TEX TRADING.
+      </p>
+    </div>
+
+    <div className="mt-6 text-right border-t border-gray-100 pt-4">
+      <span className="font-bold text-gray-900 text-sm sm:text-base">- Md. Rafiul Islam</span>
+    </div>
+  </motion.div>
+
+  {/* Managing Director's Message */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.1 }}
+    className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+  >
+    <div className="flex items-center mb-5">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+        <span className="text-blue-600 font-bold text-lg sm:text-xl">MD</span>
+      </div>
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900">MANAGING DIRECTOR'S MESSAGE</h3>
+    </div>
+
+    {/* Single Justified Text Block */}
+    <div className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify flex-grow">
+      <p className="mb-4">
+        I have had the privilege of serving as the Managing Director of STITCH TEX TRADING since 2008. Over the years, Bangladesh has emerged as a key player in the global apparel industry, and we are proud to contribute to that growth.
+      </p>
+      <p className="mb-4">
+        At STITCH TEX TRADING, our priority is to meet and exceed the expectations of our global buyers. Their satisfaction is our greatest reward. We are committed to delivering high-quality garments, on-time production, and professional service—always respecting the trust placed in us.
+      </p>
+      <p>
+        It is my firm belief that consistent buyer satisfaction builds lasting partnerships. That is our promise.
+      </p>
+    </div>
+
+    <div className="mt-6 text-right border-t border-gray-100 pt-4">
+      <span className="font-bold text-gray-900 text-sm sm:text-base">- Md Kabir Hossain</span>
+    </div>
+  </motion.div>
+
+  {/* Director's Message */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+    className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+  >
+    <div className="flex items-center mb-5">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+        <span className="text-blue-600 font-bold text-lg sm:text-xl">D</span>
+      </div>
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900">DIRECTOR'S MESSAGE</h3>
+    </div>
+
+    {/* Single Justified Text Block */}
+    <div className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify flex-grow">
+      <p className="mb-4">
+        Since 2008, I have proudly led STITCH TEX TRADING with a clear mission: to deliver quality, reliability, and complete satisfaction to our global partners. As Bangladesh continues to rise as a powerhouse in the world clothing industry, we stand committed to excellence in every stitch we produce.
+      </p>
+      <p className="mb-4">
+        Our buyers are not just clients—they are our partners. Their trust drives our performance, and their satisfaction defines our success. We listen, we adapt, and we always go the extra mile to meet and exceed expectations.
+      </p>
+      <p>
+        At STITCH TEX TRADING, we don't just make garments—we build lasting relationships through integrity, quality, and dedication.
+      </p>
+    </div>
+
+    <div className="mt-6 text-right border-t border-gray-100 pt-4">
+      <span className="font-bold text-gray-900 text-sm sm:text-base">- Muhammad Toufiq Saleheen</span>
+    </div>
+  </motion.div>
+</div>
       </section>
 
       {/* Features Section - Responsive Grid */}
@@ -358,7 +367,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer - Fully Responsive */}
+      {/* Footer - Fully Responsive
       <footer className="bg-gray-900 text-white py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
@@ -426,7 +435,7 @@ export default function HomePage() {
             <p>&copy; {new Date().getFullYear()} STITCH TEX TRADING. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

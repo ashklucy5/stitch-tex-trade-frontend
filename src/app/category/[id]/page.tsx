@@ -17,7 +17,7 @@ export default function CategoryDetailPage() {
     const fetchData = async () => {
       try {
         // Fetch all products (only 1 API call needed)
-        const productsRes = await fetch('https://stitchtextrading.com/api/products')
+        const productsRes = await fetch('https://api.stitchtextrading.com/api/products')
         
         if (!productsRes.ok) throw new Error(`Products API error: ${productsRes.status}`)
         

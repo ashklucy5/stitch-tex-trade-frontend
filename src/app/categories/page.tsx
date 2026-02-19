@@ -14,8 +14,8 @@ export default function CategoriesPage() {
       try {
         // ✅ FIXED: Use absolute URLs to your Laravel backend
         const [categoriesRes, productsRes] = await Promise.all([
-          fetch('https://stitchtextrading.com/api/categories'),
-          fetch('https://stitchtextrading.com/api/products')
+          fetch('https://api.stitchtextrading.com/api/categories'),
+          fetch('https://api.stitchtextrading.com/api/products')
         ])
 
         if (!categoriesRes.ok) throw new Error(`Categories API error: ${categoriesRes.status}`)

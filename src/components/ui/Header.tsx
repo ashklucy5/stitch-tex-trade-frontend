@@ -22,7 +22,7 @@ export function Header() {
     const fetchCategories = async () => {
       try {
         // ⚠️ CRITICAL FIX: Removed trailing spaces from URL
-        const response = await fetch('https://stitchtextrading.com/api/categories')
+        const response = await fetch('https://api.stitchtextrading.com/api/categories')
         if (!response.ok) throw new Error('Failed to fetch categories')
         const data = await response.json()
         setCategories(data)

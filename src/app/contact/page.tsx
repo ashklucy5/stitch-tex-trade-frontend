@@ -24,7 +24,7 @@ export default function ContactPage() {
   // Company contact information
   const companyInfo = {
     address: "Dhaka, Bangladesh",
-    phone: "+8801713 271735, +8801611 723485", // Chairman's phone number
+    phone: "+8801713 271735, +8801711 657285", // Chairman's phone number
     email: "info@stitchtextrading.com",
     website: "www.stitchtextrading.com"
   };
@@ -51,13 +51,6 @@ export default function ContactPage() {
       phone: "+8801730 325889",
       department: "Commercial & Accounts"
     },
-    {
-      name: "Sales Team",
-      role: "Sales Department",
-      email: "sales@stitchtextrading.com",
-      phone: "+8801730 325889",
-      department: "Sales"
-    }
   ];
 
   // Handle form input changes
@@ -118,7 +111,7 @@ export default function ContactPage() {
     setSubmitting(true)
     
     try {
-      const response = await fetch('https://stitchtextrading.com/api/contact', {
+      const response = await fetch('https://api.stitchtextrading.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
