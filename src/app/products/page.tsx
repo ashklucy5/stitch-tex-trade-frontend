@@ -163,7 +163,7 @@ export default function AllProductsCatalog() {
               <div className="aspect-square bg-gray-50 overflow-hidden relative">
                 {product.image ? (
                   <img
-                    src={`https://stitchtextrading.com/storage/${product.image}`}
+                    src={product.image_url}
                     alt={`Product ${index + 1} - ${product.category?.name}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {

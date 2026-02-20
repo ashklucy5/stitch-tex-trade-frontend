@@ -11,6 +11,16 @@ const nextConfig = {
         port: '3000',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'stitchtextrading.com',
+        pathname: '/storage/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.stitchtextrading.com',
+        pathname: '/storage/**',
+      },
       // 🔒 PRODUCTION: Replace with your actual image hosts
       // {
       //   protocol: 'https',
