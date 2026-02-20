@@ -25,9 +25,13 @@ export default function HomePage() {
           className="relative z-10 text-center max-w-4xl mx-auto"
         >
           <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl p-2 mb-6">
-            <div className="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">S</span>
-            </div>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
+  <img 
+    src="/logo.png" 
+    alt="Stitch Tex Logo" 
+    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transform hover:scale-110 transition-transform duration-300" 
+  />
+</div>
           </div>
           
           <motion.h1 
@@ -88,8 +92,12 @@ export default function HomePage() {
                 
                 {/* Central brand emblem */}
                 <div className="relative z-10 text-center p-6">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <div className="text-white text-3xl sm:text-4xl font-bold tracking-tight">S</div>
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden max-w-full max-h-full">
+                    <img 
+    src="/logo.png" 
+    alt="Stitch Tex Logo" 
+    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transform hover:scale-110 transition-transform duration-300"
+  />
                   </div>
                   <h3 className="text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-1">
                     About Us
@@ -299,22 +307,26 @@ prices in the market. All we can say is,
               {
                 title: "Quality Assurance",
                 description: "Rigorous quality control processes to ensure every product meets international standards",
-                color: "from-blue-600 to-cyan-500"
+                color: "from-blue-600 to-cyan-500",
+                icon: "Q"
               },
               {
                 title: "Timely Delivery",
                 description: "Reliable production schedules and on-time delivery for every order",
-                color: "from-blue-600 to-cyan-500"
+                color: "from-blue-600 to-cyan-500",
+                icon: "T"
               },
               {
                 title: "Competitive Pricing",
                 description: "Cost-effective solutions without compromising on quality",
-                color: "from-blue-600 to-cyan-500"
+                color: "from-blue-600 to-cyan-500",
+                icon: "C"
               },
               {
                 title: "Global Experience",
                 description: "Proven track record serving international clients across multiple continents",
-                color: "from-blue-600 to-cyan-500"
+                color: "from-blue-600 to-cyan-500",
+                icon: "G"
               }
             ].map((feature, index) => (
               <motion.div
@@ -326,7 +338,8 @@ prices in the market. All we can say is,
                 className="bg-white rounded-xl p-5 sm:p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
-                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                   <div className="text-white text-4xl font-bold">{feature.icon}</div>
+                  {/* <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div> */}
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-700 text-sm sm:text-base">{feature.description}</p>

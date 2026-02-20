@@ -17,7 +17,7 @@ export function Footer() {
                 <div className="absolute right-0 top-1/2 w-0 h-0 border-t-2 border-b-2 border-l-4 border-transparent border-l-blue-400 transform -translate-y-1/2"></div>
               </div>
               <span className="font-bold text-xl sm:text-2xl meddon-regular">
-                STITCH T<span className="needle-e"></span>X TRADING
+                STITCH T<span className="needle-e">E</span>X TRADING
               </span>
             </div>
             <p className="text-gray-400 mb-4 text-sm sm:text-base meddon-regular">
@@ -92,7 +92,7 @@ export function Footer() {
               <li className="flex items-start">
                 <div className="w-4 h-4 rounded-full bg-blue-500 mt-1 mr-3 flex-shrink-0"></div>
                 <span className="text-gray-400 text-sm meddon-regular">
-                  +8801713 271735, +8801611 723485
+                  +8801713 271735, +8801711 657285
                 </span>
               </li>
               <li className="flex items-start">
@@ -113,7 +113,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 mt-10 pt-8 text-center text-gray-400 text-sm">
           <p className="meddon-regular">
-            &copy; {new Date().getFullYear()} STITCH T<span className="needle-e"></span>X TRADING. All rights reserved.
+            &copy; {new Date().getFullYear()} STITCH T<span className="needle-e">E</span>X TRADING. All rights reserved.
           </p>
         </div>
       </div>

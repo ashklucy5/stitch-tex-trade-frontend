@@ -94,24 +94,16 @@ export function Header() {
           <div className="flex justify-between h-16 items-center">
             {/* Logo - Elegant cursive gradient */}
             <Link href="/" className="flex items-center">
-              <span 
-                className="text-3xl md:text-5xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600 tracking-tight"
-                style={{ 
-                  fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
-                  WebkitFontSmoothing: 'antialiased'
-                }}
-              >
-                StitchTex
-              </span>
-              <span 
-                className="ml-1.5 text-2xl md:text-3xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 tracking-tight"
-                style={{ 
-                  fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
-                  WebkitFontSmoothing: 'antialiased'
-                }}
-              >
-                Trading
-              </span>
+              {/* Logo - Clean sans-serif (matches photo) */}
+<div className="relative flex flex-col justify-center items-center">
+    <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-blue-600 uppercase leading-none">
+      STITCH TEX
+    </span>
+    <span className="text-lg md:text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 uppercase mt-1">
+      TRADING
+    </span>
+  </div>
+
             </Link>
 
             {/* Desktop Navigation */}

@@ -10,7 +10,17 @@ export default function AboutPage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Beautiful gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50"></div>
-        
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/bg.png")', // Specify your PNG image path here
+            filter: 'blur(30px)', // Apply blur to the background image
+          }}
+        ></div>
+
+        <div 
+          className="absolute inset-0 bg-white opacity-50" 
+        ></div>
         {/* Decorative elements - pure CSS */}
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl"></div>
         <div className="absolute -top-24 -left-24 w-80 h-80 bg-cyan-100/20 rounded-full blur-3xl"></div>
@@ -23,8 +33,12 @@ export default function AboutPage() {
           className="relative z-10 text-center max-w-4xl mx-auto px-4"
         >
           <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-1 mb-8">
-            <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center">
-              <div className="text-2xl font-bold text-blue-600">S</div>
+              <div className="w-20 h-20 rounded-full bg-blue-500/20 flex items-center justify-center">
+              <img 
+                src="/logo.png" // Provide your image source here
+                alt="Logo"
+                className="w-16 h-16 object-contain" // Adjust size based on your image
+              />
             </div>
           </div>
           
@@ -80,9 +94,13 @@ export default function AboutPage() {
                 
                 {/* Central brand emblem */}
                 <div className="relative z-10 text-center p-6">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <div className="text-white text-4xl font-bold tracking-tight">S</div>
-                  </div>
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
+  <img 
+    src="/logo.png" 
+    alt="Stitch Tex Logo" 
+    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transform hover:scale-110 transition-transform duration-300" 
+  />
+</div>
                   <h3 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-2">
                     COMPANY PROFILE
                   </h3>
