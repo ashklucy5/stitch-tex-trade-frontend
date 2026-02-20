@@ -274,26 +274,18 @@ export function Header() {
                   <Link 
                     href="/" 
                     onClick={closeSidebar}
-                    className="flex items-center"
+                    className="flex flex-col items-center"
                   >
-                    <span 
-                      className="text-2xl md:text-3xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600 tracking-tight"
-                      style={{ 
-                        fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
-                        WebkitFontSmoothing: 'antialiased'
-                      }}
-                    >
-                      StitchTex
-                    </span>
-                    <span 
-                      className="ml-1 text-xl md:text-2xl italic font-serif bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 tracking-tight"
-                      style={{ 
-                        fontFamily: "'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive",
-                        WebkitFontSmoothing: 'antialiased'
-                      }}
-                    >
-                      Trading
-                    </span>
+                   <span 
+        className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-blue-600 uppercase leading-none"
+      >
+        STITCH TEX
+      </span>
+      <span 
+        className="text-sm font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 uppercase mt-0.5"
+      >
+        TRADING
+      </span>
                   </Link>
                   <button
                     onClick={closeSidebar}
