@@ -25,22 +25,21 @@ export default function HomePage() {
           className="relative z-10 text-center max-w-4xl mx-auto"
         >
           <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl p-2 mb-6">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
-  <img 
-    src="/logo.png" 
-    alt="Stitch Tex Logo" 
-    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transform hover:scale-110 transition-transform duration-300" 
-  />
-</div>
-          </div>
-          
+  <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
+    <img 
+      src="/logo.png" 
+      alt="Stitch Tex Logo" 
+      className="w-32 h-32 sm:w-36 sm:h-36 object-contain transform hover:scale-110 transition-transform duration-300" 
+    />
+  </div>
+</div>   
           <motion.h1 
-            className="mistral-font text-6xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-400"
+            className="mistral-font text-8xl sm:text-6xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-400"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Every Stitch Tells a Story
+            Every Stitch tells a Story
           </motion.h1>
           
           <motion.p 
@@ -80,38 +79,38 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Brand Element - Pure CSS (No SVG) */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex justify-center"
-            >
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-gray-100 shadow-xl flex items-center justify-center overflow-hidden">
-                {/* Subtle pattern using CSS gradient */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.05),transparent_40%)]"></div>
-                
-                {/* Central brand emblem */}
-                <div className="relative z-10 text-center p-6">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden max-w-full max-h-full">
-                    <img 
-    src="/logo.png" 
-    alt="Stitch Tex Logo" 
-    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transform hover:scale-110 transition-transform duration-300"
-  />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-1">
-                    About Us
-                  </h3>
-                  <p className="mistral-font text-base sm:text-2xl font-medium text-gray-700 mt-1">
-                    Every stitch tells a story
-                  </p>
-                </div>
-                
-                {/* Decorative corner accents - Pure CSS */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full opacity-70"></div>
-                <div className="absolute -bottom-4 -right-4 w-14 h-14 sm:w-16 sm:h-16 bg-cyan-100 rounded-full opacity-60"></div>
-              </div>
-            </motion.div>
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="flex justify-center"
+>
+  <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-gray-100 shadow-xl flex items-center justify-center overflow-hidden">
+    {/* Subtle pattern using CSS gradient */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.05),transparent_40%)]"></div>
+    
+    {/* Central brand emblem */}
+    <div className="relative z-10 text-center p-6">
+      <div className="w-36 h-36 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-4 shadow-lg overflow-hidden max-w-full max-h-full">
+        <img 
+          src="/logo.png" 
+          alt="Stitch Tex Logo" 
+          className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-contain transform hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+      <h3 className="text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-1">
+        About Us
+      </h3>
+      <p className="mistral-font text-base sm:text-3xl font-medium text-gray-700 mt-1">
+        Every stitch tells a story
+      </p>
+    </div>
+    
+    {/* Decorative corner accents - Pure CSS */}
+    <div className="absolute -top-3 -left-3 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-blue-100 rounded-full opacity-70"></div>
+    <div className="absolute -bottom-4 -right-4 w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-cyan-100 rounded-full opacity-60"></div>
+  </div>
+</motion.div>
             
             {/* Company Message */}
             <motion.div
@@ -194,9 +193,9 @@ prices in the market. All we can say is,
     className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
   >
     <div className="flex items-center mb-5">
-      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+      {/* <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
         <span className="text-blue-600 font-bold text-lg sm:text-xl">C</span>
-      </div>
+      </div> */}
       <h3 className="text-lg sm:text-xl font-bold text-gray-900">CHAIRMAN'S MESSAGE</h3>
     </div>
 
@@ -233,9 +232,9 @@ prices in the market. All we can say is,
     className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
   >
     <div className="flex items-center mb-5">
-      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+      {/* <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
         <span className="text-blue-600 font-bold text-lg sm:text-xl">MD</span>
-      </div>
+      </div> */}
       <h3 className="text-lg sm:text-xl font-bold text-gray-900">MANAGING DIRECTOR'S MESSAGE</h3>
     </div>
 
@@ -266,10 +265,10 @@ prices in the market. All we can say is,
     className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
   >
     <div className="flex items-center mb-5">
-      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+      {/* <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center mr-3 shrink-0">
         <span className="text-blue-600 font-bold text-lg sm:text-xl">D</span>
-      </div>
-      <h3 className="text-lg sm:text-xl font-bold text-gray-900">DIRECTOR'S MESSAGE</h3>
+      </div> */}
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900 text-center">DIRECTOR'S MESSAGE</h3>
     </div>
 
     {/* Single Justified Text Block */}
@@ -308,25 +307,25 @@ prices in the market. All we can say is,
                 title: "Quality Assurance",
                 description: "Rigorous quality control processes to ensure every product meets international standards",
                 color: "from-blue-600 to-cyan-500",
-                icon: "Q"
+                // icon: "Q"
               },
               {
                 title: "Timely Delivery",
                 description: "Reliable production schedules and on-time delivery for every order",
                 color: "from-blue-600 to-cyan-500",
-                icon: "T"
+                // icon: "T"
               },
               {
                 title: "Competitive Pricing",
                 description: "Cost-effective solutions without compromising on quality",
                 color: "from-blue-600 to-cyan-500",
-                icon: "C"
+                // icon: "C"
               },
               {
                 title: "Global Experience",
                 description: "Proven track record serving international clients across multiple continents",
                 color: "from-blue-600 to-cyan-500",
-                icon: "G"
+                // icon: "G"
               }
             ].map((feature, index) => (
               <motion.div
@@ -337,10 +336,10 @@ prices in the market. All we can say is,
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-5 sm:p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
+                {/* <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
                    <div className="text-white text-4xl font-bold">{feature.icon}</div>
-                  {/* <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div> */}
-                </div>
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                </div> */}
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-700 text-sm sm:text-base">{feature.description}</p>
               </motion.div>

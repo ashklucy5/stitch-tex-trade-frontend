@@ -10,16 +10,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           <div>
             <div className="flex items-center mb-4">
-              {/* Pure CSS Needle Sewing Logo - No SVG */}
-              <div className="relative w-10 h-5 mr-3">
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-blue-400"></div>
-                <div className="absolute right-2 top-1/2 w-1.5 h-1.5 border-2 border-blue-400 rounded-full bg-white transform -translate-y-1/2"></div>
-                <div className="absolute right-0 top-1/2 w-0 h-0 border-t-2 border-b-2 border-l-4 border-transparent border-l-blue-400 transform -translate-y-1/2"></div>
-              </div>
-              <span className="font-bold text-xl sm:text-2xl meddon-regular">
-                STITCH T<span className="needle-e">E</span>X TRADING
-              </span>
-            </div>
+  {/* Logo */}
+  <img 
+    src="/logo.png" // Ensure logo.png is in your public directory
+    alt="STITCH TEX TRADING Logo"
+    className="h-12 sm:h-16" // Adjusted logo size to be bigger
+  />
+  <span className="font-bold text-xl sm:text-2xl meddon-regular mx-3">
+    STITCH T<span className="needle-e">E</span>X TRADING
+  </span>
+</div>
             <p className="text-gray-400 mb-4 text-sm sm:text-base meddon-regular">
               Quality products crafted for the modern individual. Experience luxury and sophistication in every detail.
             </p>

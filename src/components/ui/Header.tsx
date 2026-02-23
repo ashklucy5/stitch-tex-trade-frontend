@@ -1,4 +1,3 @@
-// components/ui/Header.tsx
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
@@ -21,7 +20,6 @@ export function Header() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        // ⚠️ CRITICAL FIX: Removed trailing spaces from URL
         const response = await fetch('https://api.stitchtextrading.com/api/categories')
         if (!response.ok) throw new Error('Failed to fetch categories')
         const data = await response.json()
@@ -40,7 +38,6 @@ export function Header() {
   // Handle dropdown visibility with proper delay and persistence
   useEffect(() => {
     const handleMouseEnter = () => {
-      // Clear any pending close timers
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current)
       }
@@ -48,13 +45,11 @@ export function Header() {
     }
 
     const handleMouseLeave = () => {
-      // Set a timer to close after delay (allows cursor movement)
       timeoutRef.current = setTimeout(() => {
         setIsDropdownOpen(false)
-      }, 300) // 300ms delay - Apple uses ~200-300ms
+      }, 300) 
     }
 
-    // Add event listeners to both trigger and dropdown
     const triggerElement = triggerRef.current
     const dropdownElement = dropdownRef.current
 
@@ -68,7 +63,6 @@ export function Header() {
       dropdownElement.addEventListener('mouseleave', handleMouseLeave)
     }
 
-    // Cleanup
     return () => {
       if (triggerElement) {
         triggerElement.removeEventListener('mouseenter', handleMouseEnter)
@@ -90,49 +84,39 @@ export function Header() {
   return (
     <>
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            {/* Logo - Elegant cursive gradient */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex justify-between items-center h-20"> {/* Adjusted header height */}
+            {/* Logo */}
             <Link href="/" className="flex items-center">
-              {/* Logo - Clean sans-serif (matches photo) */}
-<div className="relative flex flex-col justify-center items-center">
-    <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-blue-600 uppercase leading-none">
-      STITCH TEX
-    </span>
-    <span className="text-lg md:text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 uppercase mt-1">
-      TRADING
-    </span>
-  </div>
-
+              <img 
+                src="/logo1.png" 
+                alt="STITCH TEX TRADING Logo" 
+                className="h-16 sm:h-20 md:h-24"  // Adjusting logo size based on screen size
+              />
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:block">
               <ul className="flex space-x-8">
-                {/* Home */}
                 <li>
                   <Link 
                     href="/" 
-                    className="font-medium text-gray-900 hover:text-blue-600 transition-colors relative group"
+                    className="font-medium text-2xl text-gray-900 hover:text-blue-600 transition-colors relative group"
                   >
                     Home
                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </Link>
                 </li>
                 
-                {/* Categories - Persistent Hover Dropdown */}
-                <li 
-                  ref={triggerRef}
-                  className="relative group"
-                >
+                {/* Categories */}
+                <li ref={triggerRef} className="relative group">
                   <Link 
                     href="/categories" 
-                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                    className="font-medium text-2xl text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     Categories
                   </Link>
-                  
-                  {/* Multi-column Dropdown (Apple-style) */}
+
                   {isDropdownOpen && (
                     <motion.div
                       ref={dropdownRef}
@@ -142,12 +126,10 @@ export function Header() {
                       transition={{ duration: 0.2 }}
                       className="absolute left-0 mt-2 w-[320px] bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200"
                     >
-                      {/* Dropdown Header */}
                       <div className="p-4 border-b border-gray-100">
                         <h3 className="text-lg font-semibold text-gray-900">Explore Categories</h3>
                       </div>
-                      
-                      {/* Dropdown Content - Grid Layout */}
+
                       <div className="grid grid-cols-2 gap-4 p-4">
                         {loading ? (
                           Array.from({ length: 4 }).map((_, i) => (
@@ -173,8 +155,7 @@ export function Header() {
                           ))
                         )}
                       </div>
-                      
-                      {/* View All Button */}
+
                       <div className="px-4 py-3 border-t border-gray-100">
                         <Link
                           href="/categories"
@@ -187,11 +168,10 @@ export function Header() {
                   )}
                 </li>
                 
-                {/* Static Pages */}
                 <li>
                   <Link 
                     href="/about" 
-                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group"
+                    className="font-medium text-2xl text-gray-700 hover:text-blue-600 transition-colors relative group"
                   >
                     About
                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -201,7 +181,7 @@ export function Header() {
                 <li>
                   <Link 
                     href="/contact" 
-                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group"
+                    className="font-medium text-2xl text-gray-700 hover:text-blue-600 transition-colors relative group"
                   >
                     Contact
                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -276,16 +256,11 @@ export function Header() {
                     onClick={closeSidebar}
                     className="flex flex-col items-center"
                   >
-                   <span 
-        className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-blue-600 uppercase leading-none"
-      >
-        STITCH TEX
-      </span>
-      <span 
-        className="text-sm font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 uppercase mt-0.5"
-      >
-        TRADING
-      </span>
+                    <img 
+                      src="/logo1.png" 
+                      alt="STITCH TEX TRADING Logo" 
+                      className="h-12 sm:h-16 md:h-20"  // Adjusted size for sidebar
+                    />
                   </Link>
                   <button
                     onClick={closeSidebar}
@@ -302,7 +277,6 @@ export function Header() {
               {/* Sidebar Navigation */}
               <nav className="p-6">
                 <ul className="space-y-1">
-                  {/* Home */}
                   <li>
                     <Link 
                       href="/" 
@@ -312,8 +286,6 @@ export function Header() {
                       Home
                     </Link>
                   </li>
-                  
-                  {/* Categories - Single Link */}
                   <li>
                     <Link 
                       href="/categories"
@@ -323,8 +295,6 @@ export function Header() {
                       Categories
                     </Link>
                   </li>
-                  
-                  {/* Static Pages */}
                   <li>
                     <Link 
                       href="/about"
@@ -334,7 +304,6 @@ export function Header() {
                       About Us
                     </Link>
                   </li>
-                  
                   <li>
                     <Link 
                       href="/contact"
@@ -344,9 +313,6 @@ export function Header() {
                       Contact Us
                     </Link>
                   </li>
-                  
-                  {/* Footer Links */}
-                  
                 </ul>
               </nav>
 

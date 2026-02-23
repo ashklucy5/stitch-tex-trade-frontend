@@ -21,7 +21,7 @@
   body {
     color: rgb(var(--foreground-rgb));
     background: rgb(var(--background-rgb));
-    font-family: 'Roboto', sans-serif,'Google Sans Code';
+    font-family: 'Roboto', sans-serif, 'Google Sans Code';
     line-height: 1.5;
   }
 
@@ -31,15 +31,25 @@
   }
 }
 
+/* Mistral font */
+@font-face {
+  font-family: 'Mistral';
+  src: url('/fonts/MISTRAL.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Mistral Font Class */
 .mistral-font {
-  font-family: "Mistral", "Dancing Script", cursive;
+  font-family: 'Mistral', cursive;
   font-weight: 700;
-  font-size: 2.2rem; /* text-3xl base */
+  font-size: 2.2rem; /* Default base size */
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-rendering: optimizeLegibility;
 }
 
+/* Responsive font size for Mistral */
 @media (min-width: 640px) {
   .mistral-font {
     font-size: 2.25rem; /* sm:text-4xl */
@@ -52,26 +62,25 @@
   }
 }
 
-/* Logo typography - matches photo exactly */
+/* Logo typography */
 .text-logo {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-/* For desktop */
+/* Logo text sizes */
 @media (min-width: 768px) {
   .logo-line-1 { font-size: 2.25rem; } /* STITCH TEX */
   .logo-line-2 { font-size: 1.75rem; } /* TRADING */
 }
 
-/* For mobile */
 @media (max-width: 767px) {
   .logo-line-1 { font-size: 1.875rem; }
   .logo-line-2 { font-size: 1.5rem; }
 }
 
-/* Optional: Fine-tune logo spacing */
+/* Logo container spacing */
 .logo-container {
   letter-spacing: -0.03em;
 }
